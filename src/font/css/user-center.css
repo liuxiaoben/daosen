@@ -1,0 +1,139 @@
+/*============== - layout - ===========*/
+
+.user-grid{
+  display: grid;
+  grid-template-columns: 240px auto;
+  grid-template-rows: 865px;
+  grid-gap:30px 20px;
+  padding:30px 0;
+}
+
+.user-grid .grid-box[gap]{
+  --innergap: 30px;
+}
+
+.user-menu{
+  font-size:calc(14rem / var(--font-size));
+}
+.user-menu .item{
+  display: flex;
+  align-items: center;
+  height: 45px;
+}
+
+.user-menu a{
+  display: block;
+}
+
+.user-menu a:hover{
+  color:var(--primary);
+}
+
+.user-menu .item .the-icon{
+  margin-right: 1rem;
+}
+
+.user-menu .active{
+  color:var(--primary);
+  font-weight: bold;
+}
+
+.user-header{
+  border-bottom:1px solid var(--line2);
+  height: 55px;
+/*   line-height: 52px; */
+  padding:0 30px;
+  display: flex;
+  align-items: center;
+}
+
+.user-header .second-menu{
+  height: 100%;
+}
+
+.user-header .header-title{
+  font-size:calc(14rem / var(--font-size));
+}
+
+.user-header .header-title + .second-menu{
+  margin-left: 2rem;
+}
+
+.second-menu{
+  display: inline-flex;
+  align-items: center;
+  font-size:calc(14rem / var(--font-size));
+}
+.second-menu a:hover{
+  color:var(--primary);
+}
+.second-menu .item{
+  position: relative;
+  z-index: 1;
+  border-bottom:2px solid #fff;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+}
+.second-menu .item + .item{
+  margin-left: 30px;
+}
+.second-menu .item a{
+  display: block;
+  padding: 0 1rem;
+}
+
+.second-menu .item.active{
+  border-color:var(--primary);
+}
+
+.second-menu .item.active:before{
+  content:'';
+  position: absolute;
+  z-index: 2;
+  background: var(--primary);
+  width: 5px;
+  height: 5px;
+  border-radius:50%;
+  left:50%;
+  bottom:-2.5px;
+  transform: translateX(-50%);
+}
+
+.second-menu .item.active:after{
+  content:'';
+  position: absolute;
+  z-index: 1;
+  background: var(--main-bg);
+  border:2px solid var(--primary);
+  width: 15px;
+  height: 15px;
+  border-radius:50%;
+  left:50%;
+  bottom:-7.5px;
+  transform: translateX(-50%);
+/*   clip: rect(0 0 .5px 0); */
+}
+
+.second-menu .active a{
+  color:var(--primary);
+  font-weight: bold;
+}
+
+.user-body{
+  padding: 30px;
+}
+
+.filter-form{
+  display: flex;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+.filter-form .item + .item,
+.filter-form .item + button{
+  margin-left: 2rem;
+}
+
+
